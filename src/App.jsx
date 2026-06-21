@@ -5,14 +5,12 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Envelope from './components/Envelope';
 import Hero from './components/Hero';
 import Countdown from './components/Countdown';
-import Couple from './components/Couple';
 import Timeline from './components/Timeline';
 import Gallery from './components/Gallery';
 import Events from './components/Events';
 import Venue from './components/Venue';
 import Family from './components/Family';
 import RSVP from './components/RSVP';
-import Gift from './components/Gift';
 import Share from './components/Share';
 import Footer from './components/Footer';
 import MusicPlayer from './components/MusicPlayer';
@@ -53,14 +51,12 @@ function InvitationPage() {
           >
             <Hero settings={settings} guestName={guestName} />
             <Countdown settings={settings} />
-            <Couple settings={settings} />
             <Timeline />
             <Gallery />
             <Events settings={settings} />
             <Venue settings={settings} />
             <Family settings={settings} />
             <RSVP />
-            <Gift settings={settings} />
             <Share settings={settings} />
             <Footer settings={settings} />
             <MusicPlayer audioRef={audioRef} />
