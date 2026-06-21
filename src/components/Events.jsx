@@ -46,7 +46,7 @@ const EventCard = ({ event, index }) => {
 export default function Events({ settings }) {
   const events = settings?.events || defaultEvents;
   return (
-    <section className={styles.section} id="events">
+    <section className={`${styles.section} floral-corner-tr`} id="events">
       <motion.p className="section-subtitle" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
         Save the Dates
       </motion.p>

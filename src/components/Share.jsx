@@ -23,7 +23,7 @@ export default function Share({ settings }) {
   ];
 
   return (
-    <section className={styles.section} id="share">
+    <section className={`${styles.section} floral-both`} id="share">
       <motion.h2 className={`section-title ${styles.title}`} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
         Share the Joy
       </motion.h2>

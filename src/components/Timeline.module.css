@@ -1,4 +1,6 @@
 .section {
+  position: relative;
+  overflow: hidden;
   padding: 80px 20px;
   background: linear-gradient(180deg, #fce8ed 0%, #fff9f8 100%);
   text-align: center;

@@ -1,4 +1,6 @@
 .section {
+  position: relative;
+  overflow: hidden;
   padding: 60px 20px;
   background: linear-gradient(180deg, #fff9f8 0%, #f7d6de 100%);
   text-align: center;
@@ -35,3 +37,4 @@
   background: linear-gradient(135deg, #F3E5AB, #D4AF37);
   color: #4A3E41;
 }
+

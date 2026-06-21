@@ -1,4 +1,6 @@
 .section {
+  position: relative;
+  overflow: hidden;
   padding: 80px 20px;
   background: linear-gradient(180deg, #fff9f8 0%, #fce8ed 100%);
   text-align: center;
@@ -87,3 +89,4 @@
 @media (max-width: 420px) {
   .row { grid-template-columns: 1fr; }
 }
+

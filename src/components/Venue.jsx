@@ -9,7 +9,7 @@ export default function Venue({ settings }) {
   const mapEmbed = `https://maps.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
 
   return (
-    <section className={styles.section} id="venue">
+    <section className={`${styles.section} floral-both`} id="venue">
       <motion.p className="section-subtitle" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
         The Place
       </motion.p>

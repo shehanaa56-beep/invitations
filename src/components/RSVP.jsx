@@ -25,7 +25,7 @@ export default function RSVP() {
   };
 
   return (
-    <section className={styles.section} id="rsvp">
+    <section className={`${styles.section} floral-scattered`} id="rsvp">
       <motion.p className="section-subtitle" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
         Will You Join Us?
       </motion.p>

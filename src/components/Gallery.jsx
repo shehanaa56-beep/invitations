@@ -26,7 +26,7 @@ export default function Gallery() {
   const [lightbox, setLightbox] = useState(null);
 
   return (
-    <section className={styles.section} id="gallery">
+    <section className={`${styles.section} floral-scattered`} id="gallery">
       <motion.p className="section-subtitle" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
         Moments
       </motion.p>

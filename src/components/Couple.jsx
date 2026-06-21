@@ -21,7 +21,7 @@ const PersonCard = ({ name, role, parents, tagline, image, delay }) => (
 
 export default function Couple({ settings }) {
   return (
-    <section className={styles.section} id="couple">
+    <section className={`${styles.section} floral-corner-bl`} id="couple">
       <motion.p className="section-subtitle" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
         The Beloved
       </motion.p>

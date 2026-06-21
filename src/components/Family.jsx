@@ -3,7 +3,7 @@ import styles from './Family.module.css';
 
 export default function Family({ settings }) {
   return (
-    <section className={styles.section} id="family">
+    <section className={`${styles.section} floral-corner-bl`} id="family">
       <motion.p className="section-subtitle" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
         With Love From
       </motion.p>

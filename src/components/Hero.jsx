@@ -31,7 +31,7 @@ export default function Hero({ settings, guestName }) {
   });
 
   return (
-    <section className={styles.hero} id="hero">
+    <section className={`${styles.hero} floral-corner-tr`} id="hero">
       {/* Falling petals */}
       {petals.map((p, i) => <Petal key={i} style={p.style} />)}
 

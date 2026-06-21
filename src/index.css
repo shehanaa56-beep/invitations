@@ -212,3 +212,101 @@ h1, h2, h3, h4 {
   border-radius: calc(var(--border-radius-md) - 6px);
   pointer-events: none;
 }
+
+/* ═══════════════════════════════════════════════
+   GLOBAL FLORAL BACKGROUND SYSTEM
+   Each section gets a different floral placement.
+   All pseudo-elements are pointer-events:none
+   so they never interfere with interaction.
+═══════════════════════════════════════════════ */
+
+/* Scattered tiny cherry blossoms tile — very subtle */
+.floral-scattered::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/floral_pattern.png');
+  background-size: 340px auto;
+  background-repeat: repeat;
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Large watercolor floral — top-right corner */
+.floral-corner-tr::after {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: -40px;
+  width: clamp(200px, 40%, 380px);
+  aspect-ratio: 3/4;
+  background-image: url('/images/floral_large.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.10;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Large watercolor floral — bottom-left corner */
+.floral-corner-bl::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: -40px;
+  width: clamp(200px, 40%, 380px);
+  aspect-ratio: 3/4;
+  background-image: url('/images/floral_large.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.10;
+  pointer-events: none;
+  z-index: 0;
+  transform: scaleX(-1) rotate(180deg);
+}
+
+/* Large watercolor floral — top-left */
+.floral-corner-tl::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -40px;
+  width: clamp(180px, 35%, 340px);
+  aspect-ratio: 3/4;
+  background-image: url('/images/floral_large.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.09;
+  pointer-events: none;
+  z-index: 0;
+  transform: scaleX(-1);
+}
+
+/* Both corners — scattered + large floral combined */
+.floral-both::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/floral_pattern.png');
+  background-size: 280px auto;
+  background-repeat: repeat;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+}
+.floral-both::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -30px;
+  width: clamp(160px, 30%, 300px);
+  aspect-ratio: 3/4;
+  background-image: url('/images/floral_large.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.09;
+  pointer-events: none;
+  z-index: 0;
+}
+

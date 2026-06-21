@@ -1,4 +1,6 @@
 .hero {
+  --floral-pattern: url('/images/floral_pattern.png');
+  --floral-large: url('/images/floral_large.png');
   position: relative;
   min-height: 100vh;
   background: linear-gradient(160deg, #fce8ed 0%, #f7d6de 35%, #f0c2ce 70%, #e9b8c4 100%);

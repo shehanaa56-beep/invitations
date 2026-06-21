@@ -56,7 +56,7 @@ const TimelineItem = ({ event }) => {
 
 export default function Timeline() {
   return (
-    <section className={styles.section} id="timeline">
+    <section className={`${styles.section} floral-corner-tl`} id="timeline">
       <motion.p className="section-subtitle" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
         Our Journey
       </motion.p>

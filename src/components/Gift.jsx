@@ -3,7 +3,7 @@ import styles from './Gift.module.css';
 
 export default function Gift({ settings }) {
   return (
-    <section className={styles.section} id="gift">
+    <section className={`${styles.section} floral-corner-tr`} id="gift">
       <motion.p className="section-subtitle" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
         With Gratitude
       </motion.p>
