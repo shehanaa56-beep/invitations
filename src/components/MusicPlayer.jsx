@@ -4,7 +4,12 @@ import { FiPlay, FiPause, FiVolume2, FiVolumeX } from 'react-icons/fi';
 import styles from './MusicPlayer.module.css';
 
 export default function MusicPlayer({ audioRef }) {
-  const [playing, setPlaying] = useState(true);
+  const [playing, setPlaying] = useState(() => {
+    if (audioRef?.current) {
+      return !audioRef.current.paused;
+    }
+    return true;
+  });
   const [muted, setMuted] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const [volume, setVolume] = useState(0.6);

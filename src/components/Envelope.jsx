@@ -45,7 +45,6 @@ export default function Envelope({ onOpen }) {
     audioRef.current = new Audio('/music/background.mp3');
     audioRef.current.loop = true;
     audioRef.current.volume = 0;
-    return () => audioRef.current?.pause();
   }, []);
 
   const handleSealClick = async () => {

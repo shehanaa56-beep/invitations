@@ -29,6 +29,11 @@ function InvitationPage() {
 
   useEffect(() => {
     getSettings().then(setSettings);
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+      }
+    };
   }, []);
 
   const handleOpen = (audio) => {
