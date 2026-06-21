@@ -61,7 +61,9 @@ export default function Envelope({ onOpen }) {
         audioRef.current.volume = vol;
         if (vol >= 0.6) clearInterval(fade);
       }, 150);
-    } catch {}
+    } catch (error) {
+      console.error('Audio playback blocked by browser:', error);
+    }
 
     setTimeout(() => setPhase('opening'), 600);
     setTimeout(() => {
