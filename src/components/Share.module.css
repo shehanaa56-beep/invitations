@@ -1,0 +1,37 @@
+.section {
+  padding: 60px 20px;
+  background: linear-gradient(180deg, #fff9f8 0%, #f7d6de 100%);
+  text-align: center;
+}
+
+.title { margin-bottom: 0; }
+
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.shareBtn {
+  padding: 13px 28px;
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.copyBtn {
+  background: linear-gradient(135deg, #F3E5AB, #D4AF37);
+  color: #4A3E41;
+}

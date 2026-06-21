@@ -1,0 +1,51 @@
+.section {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #fce8ed 0%, #fff9f8 100%);
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 24px 20px;
+  box-shadow: 0 4px 20px rgba(233, 184, 196, 0.2);
+  border: 1px solid rgba(233, 184, 196, 0.25);
+  text-align: center;
+}
+
+.label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 3px;
+  color: var(--gold, #D4AF37);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.parents {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  color: var(--text-dark, #4A3E41);
+  margin: 0 0 8px;
+}
+
+.siblings {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 0.82rem;
+  color: #8a6070;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 500px) {
+  .grid { grid-template-columns: 1fr; }
+}

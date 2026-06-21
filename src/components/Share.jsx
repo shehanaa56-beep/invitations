@@ -1,0 +1,63 @@
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import styles from './Share.module.css';
+
+export default function Share({ settings }) {
+  const [copied, setCopied] = useState(false);
+  const url = window.location.href;
+  const bride = settings?.brideName || 'Aaliya';
+  const groom = settings?.groomName || 'Ibrahim';
+  const msg = `You're invited to ${bride} & ${groom}'s wedding! ${url}`;
+
+  const copyLink = () => {
+    navigator.clipboard.writeText(url).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
+
+  const shareButtons = [
+    { label: 'WhatsApp', color: '#25D366', href: `https://wa.me/?text=${encodeURIComponent(msg)}` },
+    { label: 'Facebook', color: '#1877F2', href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}` },
+    { label: 'Instagram', color: 'linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)', href: 'https://www.instagram.com' },
+  ];
+
+  return (
+    <section className={styles.section} id="share">
+      <motion.h2 className={`section-title ${styles.title}`} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+        Share the Joy
+      </motion.h2>
+      <div className="heart-separator"><span className="heart-icon">♦</span></div>
+      <div className={styles.btns}>
+        {shareButtons.map((b) => (
+          <motion.a
+            key={b.label}
+            href={b.href}
+            target="_blank"
+            rel="noreferrer"
+            className={styles.shareBtn}
+            style={{ background: b.color }}
+            whileHover={{ scale: 1.07, y: -3 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            {b.label}
+          </motion.a>
+        ))}
+        <motion.button
+          className={`${styles.shareBtn} ${styles.copyBtn}`}
+          onClick={copyLink}
+          whileHover={{ scale: 1.07, y: -3 }}
+          whileTap={{ scale: 0.95 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          {copied ? '✓ Copied!' : 'Copy Link'}
+        </motion.button>
+      </div>
+    </section>
+  );
+}

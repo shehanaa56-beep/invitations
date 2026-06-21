@@ -1,0 +1,28 @@
+.footer {
+  background: linear-gradient(135deg, #f7d6de 0%, #e9b8c4 100%);
+  padding: 50px 20px 40px;
+  text-align: center;
+}
+
+.names {
+  font-family: 'Alex Brush', cursive;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  color: #9a3050;
+  margin: 0 0 8px;
+}
+
+.date {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  color: #a07080;
+  margin: 0 0 16px;
+}
+
+.made {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #b08090;
+  margin: 0;
+}

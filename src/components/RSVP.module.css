@@ -1,0 +1,89 @@
+.section {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #fff9f8 0%, #fce8ed 100%);
+  text-align: center;
+}
+
+.form {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.input, .textarea, .select {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid rgba(233, 184, 196, 0.5);
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.9);
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+  color: var(--text-dark, #4A3E41);
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.textarea {
+  border-radius: 16px;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.input:focus, .textarea:focus, .select:focus {
+  border-color: var(--primary-rose, #E9B8C4);
+  box-shadow: 0 0 0 3px rgba(233, 184, 196, 0.25);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.selectWrap { position: relative; }
+.selectWrap::after {
+  content: '▾';
+  position: absolute;
+  right: 16px; top: 50%;
+  transform: translateY(-50%);
+  color: #a07080;
+  pointer-events: none;
+  font-size: 0.8rem;
+}
+
+.select {
+  border-radius: 50px;
+  appearance: none;
+  cursor: pointer;
+  padding-right: 36px;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 16px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  border-radius: 50px;
+}
+
+.success {
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 12px;
+  padding: 12px;
+  color: #8a6020;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+}
+
+.error {
+  color: #c04060;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 420px) {
+  .row { grid-template-columns: 1fr; }
+}

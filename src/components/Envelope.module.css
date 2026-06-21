@@ -1,0 +1,130 @@
+.wrapper {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #f8dde4 0%, #fce8ed 40%, #f2c8d3 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* ── Islamic header ── */
+.bismillah { text-align: center; margin-bottom: 40px; }
+.bismillahLine1 {
+  font-family: 'Alex Brush', cursive;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  color: #c04060;
+  margin-bottom: 4px;
+}
+.bismillahLine2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: #9a5060;
+  letter-spacing: 1px;
+}
+
+/* ── Envelope ── */
+.envelopeContainer { position: relative; perspective: 900px; }
+
+.envelope {
+  position: relative;
+  width: clamp(260px, 45vw, 420px);
+  height: clamp(180px, 32vw, 290px);
+  background: linear-gradient(160deg, #f4c5d0 0%, #e9a8bc 100%);
+  border-radius: 4px;
+  box-shadow: 0 20px 60px rgba(200, 80, 110, 0.25), 0 4px 12px rgba(180, 60, 90, 0.15);
+}
+
+.flap {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 60%;
+  background: linear-gradient(160deg, #edafbf 0%, #e29aaf 100%);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top center;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  z-index: 3;
+}
+
+.envLeft {
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 0 0 130px 130px;
+  border-color: transparent transparent #e5a8ba transparent;
+  z-index: 2;
+}
+.envRight {
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 0 130px 130px 0;
+  border-color: transparent #e5a8ba transparent transparent;
+  z-index: 2;
+}
+.envBottom {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 55%;
+  background: linear-gradient(160deg, #e8a5ba 0%, #d990a8 100%);
+  z-index: 1;
+}
+
+/* ── Wax Seal ── */
+.seal {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(60px, 12vw, 85px);
+  height: clamp(60px, 12vw, 85px);
+  background: radial-gradient(circle at 35% 30%, #d44060 0%, #b02040 60%, #8a1530 100%);
+  border-radius: 50%;
+  box-shadow: var(--shadow-wax, 0 6px 12px rgba(200,50,80,0.3));
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sealBreaking { pointer-events: none; }
+.roseSvg { width: 78%; height: 78%; }
+
+/* ── Sparkles ── */
+.sparkles { position: absolute; top: 50%; left: 50%; pointer-events: none; }
+.sparkle {
+  position: absolute;
+  width: 8px; height: 8px;
+  background: radial-gradient(circle, #fff 0%, #ffe0ec 60%, transparent 100%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ── Tap hint ── */
+.tapHint {
+  font-family: 'Alex Brush', cursive;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  color: #b06070;
+  margin-top: 32px;
+  letter-spacing: 1px;
+}
+
+/* ── Floating pearls ── */
+.pearl {
+  position: absolute;
+  background: radial-gradient(circle at 30% 30%, #ffffff 0%, #f6ecee 50%, #ddc5ca 100%);
+  border-radius: 50%;
+  box-shadow: inset -2px -2px 4px rgba(0,0,0,0.1), 1px 1px 3px rgba(255,255,255,0.8);
+}
+
+/* ── Particles ── */
+.particle {
+  position: absolute;
+  width: 4px; height: 4px;
+  background: rgba(212, 175, 55, 0.6);
+  border-radius: 50%;
+}

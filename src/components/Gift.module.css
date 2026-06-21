@@ -1,0 +1,49 @@
+.section {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #fce8ed 0%, #fff9f8 100%);
+  text-align: center;
+}
+
+.card {
+  max-width: 440px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 8px 32px rgba(233, 184, 196, 0.2);
+  border: 1px solid rgba(233, 184, 196, 0.3);
+}
+
+.note {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #8a6070;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.details {
+  background: rgba(247, 214, 222, 0.25);
+  border-radius: 12px;
+  padding: 18px 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.details p {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.88rem;
+  color: var(--text-dark, #4A3E41);
+  margin: 0;
+}
+
+.details span {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #a07080;
+  margin-right: 8px;
+}
